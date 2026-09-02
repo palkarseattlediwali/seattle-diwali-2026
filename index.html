@@ -1,199 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#180021" />
-  <meta name="description" content="Seattle Diwali 2026 — Togetherness. Light. Culture." />
-  <title>Seattle Diwali 2026 | Togetherness. Light. Culture.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Seattle Diwali 2026 — Togetherness. Light. Culture.">
+<title>Seattle Diwali 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
-
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+<header id="floatingHeader" class="floating-header">
+  <a class="mobile-brand" href="#home">SEATTLE DIWALI</a>
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="nav-item active" href="#home">HOME</a>
+    <a class="nav-item" href="#about">ABOUT</a>
+    <a class="nav-item" href="#event">EVENT</a>
+    <a class="nav-item" href="#program">PROGRAM</a>
+    <a class="nav-item" href="#involved">GET INVOLVED</a>
+    <a class="nav-item" href="#sponsors">SPONSORS</a>
+    <a class="nav-item" href="#contact">CONTACT</a>
+  </nav>
+  <a class="ticket-button" href="#tickets">BUY TICKETS</a>
+  <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+</header>
 
-  <!-- Floating single-page navigation -->
-  <header class="site-header" id="siteHeader">
-    <a class="brand-mini" href="#home" aria-label="Seattle Diwali home">
-      <span class="brand-dot"></span>
-      <span>SEATTLE DIWALI</span>
-    </a>
+<main>
+<section id="home" class="hero page-section">
+  <div class="hero-art-container">
+    <img src="assets/hero-art-no-header.png" class="hero-art" alt="Seattle Diwali celebration artwork">
+  </div>
+  <!-- Functional overlay buttons positioned over the matching artwork buttons. -->
+  <div class="hero-hotspots" aria-hidden="false">
+    <a href="#tickets" class="hotspot buy-hotspot" aria-label="Buy tickets"></a>
+    <a href="#about" class="hotspot learn-hotspot" aria-label="Learn more"></a>
+  </div>
+</section>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#home">HOME</a>
-      <a class="nav-link" href="#about">ABOUT</a>
-      <a class="nav-link" href="#event">EVENT</a>
-      <a class="nav-link" href="#program">PROGRAM</a>
-      <a class="nav-link" href="#involved">GET INVOLVED</a>
-      <a class="nav-link" href="#sponsors">SPONSORS</a>
-      <a class="nav-link" href="#contact">CONTACT</a>
-    </nav>
+<section id="about" class="page-section content">
+  <div class="container two-col">
+    <div><p class="eyebrow">OUR CELEBRATION</p><h2>More than a festival.<br><span>A community.</span></h2></div>
+    <div><p class="lead">Seattle Diwali brings people together through the light, color, music and traditions of Diwali.</p><p>Our 2026 celebration is designed as a welcoming experience for families, friends, performers, local businesses, community organizations and everyone who wants to celebrate together.</p></div>
+  </div>
+</section>
 
-    <a class="ticket-nav" href="#tickets">BUY TICKETS</a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  </header>
+<section id="event" class="page-section content dark">
+  <div class="container">
+    <p class="eyebrow">THE EXPERIENCE</p><h2>An Evening to <span>Remember.</span></h2>
+    <div class="cards">
+      <article><b>01</b><h3>Welcome & Diya Lighting</h3><p>Gather together and begin the celebration with light and tradition.</p></article>
+      <article><b>02</b><h3>Cultural Performances</h3><p>Experience music, dance and performances representing our diverse community.</p></article>
+      <article><b>03</b><h3>Food & Marketplace</h3><p>Discover delicious food, local vendors, artisans and community partners.</p></article>
+      <article><b>04</b><h3>Community Celebration</h3><p>Connect, celebrate and create memories with friends and family.</p></article>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero section" id="home">
-      <div class="hero-art-wrap">
-        <img src="assets/hero-art.png" class="hero-art" alt="Seattle Diwali celebration artwork with Seattle skyline, diya and dancers" />
-      </div>
+<section id="program" class="page-section content">
+  <div class="container">
+    <p class="eyebrow">PROGRAM</p><h2>Culture takes <span>center stage.</span></h2>
+    <div class="program-list">
+      <div><span>01</span><b>Cultural Performances</b><small>Music • Dance • Live acts</small><em>Coming Soon</em></div>
+      <div><span>02</span><b>Traditional Ceremony</b><small>Diwali traditions & celebration</small><em>Coming Soon</em></div>
+      <div><span>03</span><b>Community Showcase</b><small>Local talent & organizations</small><em>Coming Soon</em></div>
+      <div><span>04</span><b>Finale</b><small>A celebration for everyone</small><em>Coming Soon</em></div>
+    </div>
+  </div>
+</section>
 
-      <div class="hero-content">
-        <div class="eyebrow">SEATTLE DIWALI 2026</div>
-        <h1>Togetherness.<br><span>Light.</span> Culture.</h1>
-        <p class="hero-copy">A celebration of unity, joy, tradition, music, food and community.</p>
+<section id="involved" class="page-section content dark">
+  <div class="container"><p class="eyebrow">GET INVOLVED</p><h2>Bring your <span>light.</span></h2>
+    <div class="cards three"><article><h3>Volunteer</h3><p>Help us create a memorable celebration for the entire community.</p></article><article><h3>Perform</h3><p>Share your music, dance or cultural talent with Seattle.</p></article><article><h3>Become a Vendor</h3><p>Showcase your products, food or services at the marketplace.</p></article></div>
+  </div>
+</section>
 
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#tickets">BUY TICKETS <span>→</span></a>
-          <a class="btn btn-outline" href="#about">LEARN MORE <span>→</span></a>
-        </div>
-      </div>
+<section id="sponsors" class="page-section content">
+  <div class="container center"><p class="eyebrow">OUR PARTNERS</p><h2>Celebrate with <span>us.</span></h2><p class="lead">Sponsor information and partner opportunities will be announced soon.</p><div class="sponsors"><span>YOUR LOGO</span><span>YOUR LOGO</span><span>YOUR LOGO</span><span>YOUR LOGO</span></div></div>
+</section>
 
-      <div class="hero-details glass-panel">
-        <div class="detail">
-          <span class="detail-icon">▣</span>
-          <div><small>DATE</small><strong>November 15th, 2026</strong></div>
-        </div>
-        <div class="divider"></div>
-        <div class="detail">
-          <span class="detail-icon">⌖</span>
-          <div><small>VENUE</small><strong>Mukilteo Hall</strong><em>Location details coming soon</em></div>
-        </div>
-        <div class="divider"></div>
-        <div class="detail">
-          <span class="detail-icon">◷</span>
-          <div><small>TIME</small><strong>Coming Soon</strong></div>
-        </div>
-      </div>
+<section id="tickets" class="page-section tickets"><div class="container ticket-inner"><div><p class="eyebrow">NOVEMBER 15, 2026</p><h2>Save your place<br>in the <span>light.</span></h2><p>Ticket information coming soon.</p></div><span class="ticket-coming">TICKETS COMING SOON</span></div></section>
 
-      <div class="feature-row">
-        <a href="#program" class="feature-card"><span>♫</span><b>Cultural<br>Performances</b></a>
-        <a href="#event" class="feature-card"><span>◉</span><b>Traditional<br>Ceremony</b></a>
-        <a href="#about" class="feature-card"><span>●</span><b>Community<br>Connection</b></a>
-        <a href="#event" class="feature-card"><span>🍴</span><b>Delicious<br>Food</b></a>
-        <a href="#event" class="feature-card"><span>▦</span><b>Marketplace<br>& Vendors</b></a>
-        <a href="#involved" class="feature-card"><span>♥</span><b>Volunteer<br>& Support</b></a>
-      </div>
-
-      <div class="hero-message">
-        <strong>Be a Part of the Celebration!</strong>
-        <p>Join us as we light up the night with unity, joy, and the spirit of Diwali.</p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="content-section section" id="about">
-      <div class="section-inner two-column">
-        <div>
-          <div class="section-kicker">OUR CELEBRATION</div>
-          <h2>More than a festival.<br><span>A community.</span></h2>
-        </div>
-        <div>
-          <p class="lead">Seattle Diwali brings people together through the light, color, music and traditions of Diwali.</p>
-          <p>Our 2026 celebration is designed as a welcoming experience for families, friends, performers, local businesses, community organizations and everyone who wants to celebrate together.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EVENT -->
-    <section class="content-section dark-section section" id="event">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">THE EXPERIENCE</div>
-            <h2>An Evening to <span>Remember.</span></h2>
-          </div>
-          <p>Expect a vibrant evening filled with culture, celebration and connection.</p>
-        </div>
-
-        <div class="event-grid">
-          <article class="event-card"><span>01</span><h3>Welcome & Diya Lighting</h3><p>Gather together and begin the celebration with light and tradition.</p></article>
-          <article class="event-card"><span>02</span><h3>Cultural Performances</h3><p>Experience music, dance and performances representing our diverse community.</p></article>
-          <article class="event-card"><span>03</span><h3>Food & Marketplace</h3><p>Discover delicious food, local vendors, artisans and community partners.</p></article>
-          <article class="event-card"><span>04</span><h3>Community Celebration</h3><p>Connect, celebrate and create memories with friends and family.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGRAM -->
-    <section class="content-section section" id="program">
-      <div class="section-inner">
-        <div class="section-kicker">PROGRAM</div>
-        <h2>Culture takes <span>center stage.</span></h2>
-        <p class="lead narrow">Our program will bring together music, dance, ceremony and community performances.</p>
-
-        <div class="program-list">
-          <div class="program-row"><span>01</span><div><b>Cultural Performances</b><small>Music • Dance • Live acts</small></div><strong>Coming Soon</strong></div>
-          <div class="program-row"><span>02</span><div><b>Traditional Ceremony</b><small>Diwali traditions & celebration</small></div><strong>Coming Soon</strong></div>
-          <div class="program-row"><span>03</span><div><b>Community Showcase</b><small>Local talent & organizations</small></div><strong>Coming Soon</strong></div>
-          <div class="program-row"><span>04</span><div><b>Finale</b><small>A celebration for everyone</small></div><strong>Coming Soon</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GET INVOLVED -->
-    <section class="content-section dark-section section" id="involved">
-      <div class="section-inner">
-        <div class="section-kicker">GET INVOLVED</div>
-        <h2>Bring your <span>light.</span></h2>
-        <div class="involvement-grid">
-          <article><div class="round-icon">♥</div><h3>Volunteer</h3><p>Help us create a memorable celebration for the entire community.</p><a href="#contact">Join the team →</a></article>
-          <article><div class="round-icon">♫</div><h3>Perform</h3><p>Share your music, dance or cultural talent with Seattle.</p><a href="#contact">Express interest →</a></article>
-          <article><div class="round-icon">▦</div><h3>Become a Vendor</h3><p>Showcase your products, food or services at the marketplace.</p><a href="#contact">Learn more →</a></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPONSORS -->
-    <section class="content-section section" id="sponsors">
-      <div class="section-inner centered">
-        <div class="section-kicker">OUR PARTNERS</div>
-        <h2>Celebrate with <span>us.</span></h2>
-        <p class="lead narrow">Sponsor information and partner opportunities will be announced soon.</p>
-        <div class="sponsor-placeholder">
-          <span>YOUR LOGO</span><span>YOUR LOGO</span><span>YOUR LOGO</span><span>YOUR LOGO</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- TICKETS -->
-    <section class="ticket-section section" id="tickets">
-      <div class="ticket-inner">
-        <div>
-          <div class="section-kicker">NOVEMBER 15, 2026</div>
-          <h2>Save your place<br>in the <span>light.</span></h2>
-          <p>Ticket information coming soon.</p>
-        </div>
-        <button class="btn btn-gold disabled" type="button">TICKETS COMING SOON</button>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="content-section dark-section section" id="contact">
-      <div class="section-inner two-column">
-        <div>
-          <div class="section-kicker">CONTACT</div>
-          <h2>Let's celebrate<br><span>together.</span></h2>
-        </div>
-        <div class="contact-box">
-          <p>Questions, partnerships, performances, volunteering or vendor opportunities?</p>
-          <a class="btn btn-gold" href="mailto:info@seattledi wali.com">CONTACT US <span>→</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div>SEATTLE DIWALI 2026</div>
-    <div>Togetherness. Light. Culture.</div>
-  </footer>
-
-  <script src="script.js"></script>
+<section id="contact" class="page-section content dark"><div class="container two-col"><div><p class="eyebrow">CONTACT</p><h2>Let's celebrate<br><span>together.</span></h2></div><div class="contact-box"><p>Questions, partnerships, performances, volunteering or vendor opportunities?</p><a class="button" href="mailto:">CONTACT US →</a></div></div></section>
+</main>
+<footer>SEATTLE DIWALI 2026 <span>Togetherness. Light. Culture.</span></footer>
+<script src="script.js?v=3"></script>
 </body>
 </html>

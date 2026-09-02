@@ -1,20 +1,25 @@
-# Seattle Diwali 2026
+# Seattle Diwali 2026 — Single Page Website
 
-A responsive, animation-ready landing page inspired by the Seattle Diwali design.
+This version uses the supplied Seattle Diwali artwork as the visual direction for the hero while keeping the navigation as a separate floating, sticky panel.
 
-## Event details
+## Files
+- `index.html` — page structure and content
+- `style.css` — design, responsive layout and animations
+- `script.js` — mobile menu, active navigation and reveal animations
+- `assets/hero-art.png` — prepared transparent artwork based on the supplied design
+
+## Publish on GitHub Pages
+1. Upload all files/folders to the root of your GitHub repository.
+2. Open **Settings → Pages**.
+3. Choose **Deploy from a branch**.
+4. Select `main` and `/(root)`.
+5. Save.
+
+## Before launch
+Replace placeholder contact information, ticket destination, sponsor logos, schedule, time and address as they become confirmed.
+
+The page currently uses:
 - Date: November 15th, 2026
 - Venue: Mukilteo Hall
-- Time: 4:00 PM – 9:00 PM PST
-
-## Run locally
-Open `index.html` in a browser, or use any static server.
-
-## Customize
-- Replace the emoji/art placeholders in `index.html` with your generated PNG/SVG assets.
-- Update ticket and social links.
-- Add real sponsor logos and program content.
-- The `.reveal`, `float`, `spin`, and `pulse` animations can be adjusted in `style.css`.
-
-## GitHub Pages
-Push these three files to a repository and enable GitHub Pages from the repository's Settings → Pages. Use the root folder as the publishing source.
+- Time: Coming Soon
+- Location details: Coming Soon

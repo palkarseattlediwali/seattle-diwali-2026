@@ -19,3 +19,11 @@ const observer=new IntersectionObserver(entries=>{
   links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+current.target.id));
 },{rootMargin:"-35% 0px -55% 0px",threshold:[.05,.2,.5]});
 sections.forEach(s=>observer.observe(s));
+
+document.querySelectorAll(".tier-toggle").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const expanded=btn.closest(".tier").classList.toggle("expanded");
+    btn.setAttribute("aria-expanded",expanded);
+    btn.textContent=expanded?"Show less ▴":"Show all benefits ▾";
+  });
+});

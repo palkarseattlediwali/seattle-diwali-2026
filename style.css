@@ -59,7 +59,7 @@ footer{padding:28px 7vw;background:#0d0012;border-top:1px solid rgba(244,189,55,
  .nav-item{padding:11px 8px!important}.nav-item:after{display:none!important}
  .ticket-button{margin-left:auto!important;padding:11px 13px!important;font-size:9px!important}
  .menu-button{display:block!important;border:0!important;background:transparent!important;color:#fff!important;font-size:22px!important;line-height:1!important}
- .hero{min-height:auto!important;padding:78px 0 24px!important;display:block!important}
+ .hero{min-height:auto!important;padding:56px 0 24px!important;display:block!important}
  .hero-hotspots{display:none!important}
  .content{padding:80px 20px}.two-col{grid-template-columns:1fr;gap:30px}.cards,.cards.three,.cards.two{grid-template-columns:1fr 1fr}.schedule-list>div{grid-template-columns:120px 1fr}footer{display:block;padding:25px 20px}footer span{display:block;margin-top:8px}
 }
@@ -70,21 +70,26 @@ footer{padding:28px 7vw;background:#0d0012;border-top:1px solid rgba(244,189,55,
 .scene-fireworks,.hero-fireworks{display:none!important}
 .scene-event-details{position:absolute;z-index:2;left:21%;top:57%;width:54%;display:grid;grid-template-columns:repeat(3,1fr);padding:15px 18px;border:1px solid rgba(244,189,55,.4);border-radius:20px;background:rgba(34,0,46,.88);box-shadow:0 8px 24px rgba(0,0,0,.18);text-align:center}.scene-event-details>div+div{border-left:1px solid rgba(244,189,55,.25)}.scene-event-details span{display:block;margin-bottom:5px;color:#f4bd37;font-size:9px;font-weight:800;letter-spacing:1.6px}.scene-event-details strong{font-size:12px}.scene-event-details a{text-decoration:underline;text-decoration-color:rgba(244,189,55,.55);text-underline-offset:3px}
 
+/* lanterns-left.png and lanterns-right.png are the same source image; mirror the left one so the pair reads as a symmetric frame instead of a duplicate. Applies at every width. */
+.asset-lanterns-left{transform:scaleX(-1)}
+
 @media(max-width:760px){.scene-event-details{position:static;left:auto;top:auto;width:100%;margin-top:20px;grid-template-columns:1fr;padding:4px 20px;border-radius:16px}.scene-event-details>div{padding:14px 0}.scene-event-details>div+div{border-left:0;border-top:1px solid rgba(244,189,55,.25)}.scene-event-details span{margin-bottom:5px;font-size:10px;letter-spacing:1.5px}.scene-event-details strong{font-size:14px}.scene-event-details a{text-underline-offset:2px}}
 
 /* Mobile hero: reflow the layered scene into a vertical stack instead of shrinking one wide canvas. Desktop is untouched — everything here is gated by the max-width:760px query and only targets classes/areas introduced for this layout. */
 @media(max-width:760px){
- .hero-scene{width:100%;display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"lanternL lanternR" "headline headline" "skyline skyline" "diya diya" "details details" "dancers dancers" "borderL borderR";align-items:center;justify-items:center;column-gap:6px;row-gap:16px;padding:18px 16px 6px}
+ .hero-scene{width:100%;display:grid;grid-template-columns:24% 1fr 24%;grid-template-areas:"lanternL headline lanternR" "skyline skyline skyline" "details details details" "dancers dancers dancers" "borderL borderL borderR";align-items:center;justify-items:center;column-gap:4px;row-gap:6px;padding:2px 12px 6px}
  .scene-art{display:contents}
  .scene-asset{position:static;left:auto;top:auto;height:auto;max-width:100%;margin:0}
- .asset-lanterns-left{grid-area:lanternL;width:52%;justify-self:end}
- .asset-lanterns-right{grid-area:lanternR;width:52%;justify-self:start}
- .asset-headline{grid-area:headline;width:80%}
- .asset-city{grid-area:skyline;width:96%}
- .asset-left-diya{grid-area:diya;width:44%}
- .asset-dancers{grid-area:dancers;width:58%;justify-self:start;margin-left:6%}
+ .asset-lanterns-left{grid-area:lanternL;width:100%;justify-self:start}
+ .asset-lanterns-right{grid-area:lanternR;width:100%;justify-self:end}
+ .asset-headline{grid-area:headline;width:118%;max-width:118%;justify-self:center;margin-bottom:-40px}
+ .asset-city{grid-area:skyline;width:96%;margin-top:-22px}
+ .asset-dancers{grid-area:dancers;width:58%;justify-self:start;margin-left:6%;margin-top:10px}
  .asset-border-l{grid-area:borderL;width:100%}
  .asset-border-r{grid-area:borderR;width:100%}
- .scene-event-details{grid-area:details;margin-top:0}
- .asset-firework,.asset-right-ornament,.asset-lantern-cluster,.asset-spotlights,.asset-celebration-card,.asset-lotus{display:none}
+ .scene-event-details{grid-area:details;position:relative;margin-top:14px}
+ .scene-event-details::before{content:"";position:absolute;top:-8.5%;bottom:-63.5%;right:-10%;width:90vw;background:url('assets/elements/right-ornament.png') no-repeat right center/contain;opacity:.32;pointer-events:none}
+ .scene-event-details>div{position:relative}
+ .asset-lantern-cluster{position:absolute;left:4%;bottom:24%;width:22%;height:auto;opacity:.4;pointer-events:none;z-index:1}
+ .asset-firework,.asset-right-ornament,.asset-spotlights,.asset-celebration-card,.asset-lotus,.asset-left-diya{display:none}
 }

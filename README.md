@@ -1,24 +1,15 @@
-# Seattle Diwali 2026 — Single Page Website
+# Seattle Diwali 2026 — Fixed Single Page
 
-This version uses the supplied Seattle Diwali artwork as the visual direction for the hero while keeping the navigation as a separate floating, sticky panel.
+This build fixes the broken header/layout by:
+- keeping the navigation as a true fixed floating panel
+- removing the duplicate navigation from the supplied hero artwork
+- using the supplied artwork as the visual hero composition
+- keeping all other sections on the same scrolling page
+- adding cache-busting `?v=3` to CSS and JS references
 
-## Files
-- `index.html` — page structure and content
-- `style.css` — design, responsive layout and animations
-- `script.js` — mobile menu, active navigation and reveal animations
-- `assets/hero-art.png` — prepared transparent artwork based on the supplied design
+Upload the contents to the root of the GitHub Pages repository.
 
-## Publish on GitHub Pages
-1. Upload all files/folders to the root of your GitHub repository.
-2. Open **Settings → Pages**.
-3. Choose **Deploy from a branch**.
-4. Select `main` and `/(root)`.
-5. Save.
-
-## Before launch
-Replace placeholder contact information, ticket destination, sponsor logos, schedule, time and address as they become confirmed.
-
-The page currently uses:
+Confirmed content:
 - Date: November 15th, 2026
 - Venue: Mukilteo Hall
 - Time: Coming Soon

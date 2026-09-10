@@ -52,8 +52,12 @@ p{color:#d9cbe0;line-height:1.8;font-size:15px}.lead{font-size:19px;color:#fff}
 .cards.two{grid-template-columns:repeat(2,1fr)}
 .cards.two article,.cards.three article{display:flex;flex-direction:column}
 .cards .button{margin-top:auto;align-self:flex-start}
-.organizer-photo{width:100%;aspect-ratio:1;margin-bottom:18px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(244,189,55,.35);border-radius:16px;background:rgba(255,255,255,.04);color:#8d7a95;font-size:11px;letter-spacing:2px}
-.organizer-card h3{margin-bottom:6px}
+.organizer-card{text-align:center}
+.organizer-photo{width:100%;aspect-ratio:4/5;margin-bottom:20px;border-radius:999px 999px 14px 14px;overflow:hidden;border:4px solid #f4bd37;box-shadow:inset 0 0 0 2px rgba(20,0,10,.4),inset 0 0 0 7px rgba(244,189,55,.35),0 10px 28px rgba(0,0,0,.35)}
+.organizer-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.organizer-card h3{margin-bottom:8px}
+.organizer-divider{display:block;color:#f4bd37;font-size:12px;margin-bottom:8px}
+.organizer-card a{text-decoration:underline;text-decoration-color:rgba(244,189,55,.55);text-underline-offset:3px}
 .schedule-list{margin-top:45px;border-top:1px solid rgba(244,189,55,.25)}
 .schedule-list>div{display:grid;grid-template-columns:160px 1fr;align-items:center;gap:15px;padding:22px 8px;border-bottom:1px solid rgba(244,189,55,.25)}
 .schedule-list span{color:#f4bd37;font-weight:800;font-size:14px}

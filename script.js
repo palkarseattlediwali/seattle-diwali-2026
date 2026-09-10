@@ -3,16 +3,21 @@ const menu=document.getElementById("menuButton");
 const links=[...document.querySelectorAll(".nav-item")];
 const sections=[...document.querySelectorAll(".page-section")];
 
-menu.addEventListener("click",()=>{
+menu.addEventListener("click",(e)=>{
+  e.stopPropagation();
   const open=header.classList.toggle("open");
   menu.setAttribute("aria-expanded",open);
-  menu.textContent=open?"×":"☰";
 });
 links.forEach(l=>l.addEventListener("click",()=>{
   header.classList.remove("open");
   menu.setAttribute("aria-expanded","false");
-  menu.textContent="☰";
 }));
+document.addEventListener("click",(e)=>{
+  if(header.classList.contains("open") && !header.contains(e.target)){
+    header.classList.remove("open");
+    menu.setAttribute("aria-expanded","false");
+  }
+});
 const observer=new IntersectionObserver(entries=>{
   const current=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
   if(!current)return;

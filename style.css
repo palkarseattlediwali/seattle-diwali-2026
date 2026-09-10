@@ -78,12 +78,14 @@ footer{padding:28px 7vw;background:#0d0012;border-top:1px solid rgba(244,189,55,
 @media(max-width:1050px) and (min-width:761px){.nav-item{padding-left:6px;padding-right:6px;font-size:10px}.ticket-button{padding:12px 14px}}
 @media(max-width:760px){
  .floating-header{top:10px!important;width:calc(100% - 20px)!important;min-height:52px!important;flex-wrap:wrap!important;padding:7px 10px!important;border-radius:28px!important}
- .mobile-brand{display:block!important;font-size:9px!important;font-weight:800!important;letter-spacing:1px!important}
- .nav{display:none!important;order:5!important;width:100%!important;flex-direction:column!important;align-items:stretch!important}
+ .mobile-brand{display:block!important;font-family:Cinzel,serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:1px!important;color:#f4bd37!important}
+ .nav{display:none!important;order:5!important;flex:1 1 100%!important;width:100%!important;flex-direction:column!important;align-items:stretch!important}
  .floating-header.open .nav{display:flex!important}
  .nav-item{padding:11px 8px!important}.nav-item:after{display:none!important}
  .ticket-button{margin-left:auto!important;padding:11px 13px!important;font-size:9px!important}
+ .floating-header.open .ticket-button{order:6!important;flex:1 1 100%!important;width:100%!important;margin:10px 0 0!important;padding:14px!important;font-size:12px!important;text-align:center!important;border-radius:16px!important}
  .menu-button{display:block!important;border:0!important;background:transparent!important;color:#fff!important;font-size:22px!important;line-height:1!important}
+ .floating-header.open .menu-button{margin-left:auto!important}
  .hero{min-height:auto!important;padding:56px 0 24px!important;display:block!important}
  .hero-hotspots{display:none!important}
  .content{padding:80px 20px}.two-col{grid-template-columns:1fr;gap:30px}.cards,.cards.three,.cards.two,.sponsor-tiers{grid-template-columns:1fr 1fr}.schedule-list>div{grid-template-columns:120px 1fr}footer{display:block;padding:25px 20px}footer span{display:block;margin-top:8px}

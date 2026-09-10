@@ -53,9 +53,13 @@ p{color:#d9cbe0;line-height:1.8;font-size:15px}.lead{font-size:19px;color:#fff}
 .cards.two article,.cards.three article{display:flex;flex-direction:column}
 .cards .button{margin-top:auto;align-self:flex-start}
 .organizer-card{text-align:center}
-.organizer-photo{width:100%;aspect-ratio:4/5;margin-bottom:20px;border-radius:999px 999px 14px 14px;overflow:hidden;border:4px solid #f4bd37;box-shadow:inset 0 0 0 2px rgba(20,0,10,.4),inset 0 0 0 7px rgba(244,189,55,.35),0 10px 28px rgba(0,0,0,.35)}
+.organizer-photo{width:100%;aspect-ratio:4/5;margin-bottom:20px;border-radius:999px 999px 14px 14px;overflow:hidden;border:4px solid #f4bd37;box-shadow:inset 0 0 0 2px rgba(20,0,10,.4),inset 0 0 0 7px rgba(244,189,55,.35),0 10px 28px rgba(0,0,0,.35);opacity:0;transform:translateY(24px) scale(.88);transition:opacity 1.4s ease,transform 1.6s cubic-bezier(.34,1.56,.64,1)}
+.organizer-photo.in-view{opacity:1;transform:translateY(0) scale(1)}
+.organizer-card:nth-child(2) .organizer-photo{transition-delay:.25s}
+.organizer-card:nth-child(3) .organizer-photo{transition-delay:.5s}
+@media(prefers-reduced-motion:reduce){.organizer-photo{opacity:1;transform:none;transition:none}}
 .organizer-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.organizer-card h3{margin-bottom:8px}
+.organizer-card h3{margin-bottom:8px;font-style:italic;color:#f4bd37;letter-spacing:.5px}
 .organizer-divider{display:block;color:#f4bd37;font-size:12px;margin-bottom:8px}
 .organizer-card a{text-decoration:underline;text-decoration-color:rgba(244,189,55,.55);text-underline-offset:3px}
 .schedule-list{margin-top:45px;border-top:1px solid rgba(244,189,55,.25)}

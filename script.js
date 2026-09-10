@@ -32,3 +32,16 @@ document.querySelectorAll(".tier-toggle").forEach(btn=>{
     btn.textContent=expanded?"Show less ▴":"Show all benefits ▾";
   });
 });
+
+const orgPhotos=[...document.querySelectorAll(".organizer-photo")];
+if(orgPhotos.length){
+  const orgObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("in-view");
+        orgObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.3});
+  orgPhotos.forEach(p=>orgObserver.observe(p));
+}

@@ -29,6 +29,18 @@ a{color:inherit;text-decoration:none}
 .dark{background:linear-gradient(135deg,#100016,#270032)}
 .container{max-width:1120px;margin:0 auto}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.venue-hero{position:relative;min-height:440px;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.venue-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,0,22,.1),rgba(16,0,22,.9))}
+.venue-hero-overlay{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 7vw 60px;width:100%}
+.venue-hero-overlay .eyebrow{color:#f4bd37}
+.venue-hero-overlay h2{margin:8px 0 0;color:#fff}
+.venue-columns{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-top:30px;align-items:start}
+.venue-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.venue-photos img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(244,189,55,.2)}
+.venue-info .eyebrow{margin-top:22px;display:block}
+.venue-info p{margin:8px 0 0}
+.venue-credit{margin-top:24px;font-size:11px;color:#8d7a95}
+.venue-credit a{text-decoration:underline;text-decoration-color:rgba(244,189,55,.4)}
 .eyebrow{color:#f4bd37;font-size:12px;letter-spacing:3px;font-weight:800}
 h2{font-family:Cinzel,serif;font-size:clamp(40px,5vw,68px);line-height:1.05;margin:14px 0}
 h2 span{color:#f4bd37}
@@ -75,6 +87,10 @@ footer{padding:28px 7vw;background:#0d0012;border-top:1px solid rgba(244,189,55,
  .hero{min-height:auto!important;padding:56px 0 24px!important;display:block!important}
  .hero-hotspots{display:none!important}
  .content{padding:80px 20px}.two-col{grid-template-columns:1fr;gap:30px}.cards,.cards.three,.cards.two,.sponsor-tiers{grid-template-columns:1fr 1fr}.schedule-list>div{grid-template-columns:120px 1fr}footer{display:block;padding:25px 20px}footer span{display:block;margin-top:8px}
+ .venue-columns{grid-template-columns:1fr;gap:24px}
+ .venue-photos img{height:150px}
+ .venue-hero{min-height:260px}
+ .venue-hero-overlay{padding:0 20px 30px}
 }
 @media(max-width:480px){.cards,.cards.three,.cards.two,.sponsor-tiers{grid-template-columns:1fr}h2{font-size:40px}}
 @media(max-width:760px){

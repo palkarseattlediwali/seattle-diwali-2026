@@ -78,13 +78,21 @@ p{color:#d9cbe0;line-height:1.8;font-size:15px}.lead{font-size:19px;color:#fff}
 .tier li{position:relative;padding:6px 0 6px 22px;font-size:12.5px;color:#d9cbe0;line-height:1.45}
 .tier li:before{content:"✓";position:absolute;left:0;top:6px;color:var(--accent);font-weight:800}
 .tier-toggle{display:none}
-.tier-slot{margin-top:auto;padding:12px;border:1px dashed var(--accent);border-radius:14px;text-align:center;font-size:11.5px;color:#8d7a95;background:rgba(255,255,255,.02)}
-.tier-slot>a{display:block;color:inherit;transition:color .2s}
-.tier-slot>a:hover{color:#fff9ec}
-.tier-slot.has-sponsors{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;border-style:solid;border-color:rgba(244,189,55,.3);background:rgba(255,255,255,.04)}
-.sponsor-logo{display:flex;align-items:center;justify-content:center;padding:8px 14px;background:#fff;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.25);transition:transform .2s}
-.sponsor-logo:hover{transform:translateY(-2px)}
-.sponsor-logo img{max-height:40px;max-width:120px;width:auto;height:auto;display:block}
+.tier-slot{display:block;margin-top:auto;padding:12px;border:1px dashed var(--accent);border-radius:14px;text-align:center;font-size:11.5px;color:#8d7a95;background:rgba(255,255,255,.02);transition:background .2s,color .2s}
+.tier-slot:hover{background:rgba(244,189,55,.1);color:#fff9ec}
+.sponsor-showcase{margin-top:35px}
+.sponsor-showcase .eyebrow{margin-bottom:14px}
+.sponsor-showcase-grid{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
+.sponsor-thumb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:26px 42px 32px;background:#fff;border-radius:20px;box-shadow:0 8px 22px rgba(0,0,0,.3);border:4px solid transparent;transition:transform .2s}
+.sponsor-thumb:hover{transform:translateY(-2px)}
+.sponsor-thumb img{max-height:150px;max-width:400px;width:auto;height:auto;display:block}
+.sponsor-tier-tag{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px}
+.sponsor-thumb.tier-platinum{border-color:#b8afa2}
+.sponsor-thumb.tier-platinum .sponsor-tier-tag{background:#e9e6e0;color:#3a2f1c}
+.sponsor-thumb.tier-gold{border-color:#f4bd37}
+.sponsor-thumb.tier-gold .sponsor-tier-tag{background:#f4bd37;color:#250516}
+.sponsor-thumb.tier-bronze{border-color:#cd7f32}
+.sponsor-thumb.tier-bronze .sponsor-tier-tag{background:#cd7f32;color:#fff9ec}
 .center{text-align:center}.center>.lead{max-width:650px;margin:18px auto}.center>.contact-box{margin:60px auto 0;max-width:650px;text-align:left}
 .contact-box{padding:35px;border:1px solid rgba(244,189,55,.3);border-radius:24px;background:rgba(255,255,255,.04)}.button{display:inline-block;margin-top:20px;padding:14px 22px;border-radius:28px;background:#f4bd37;color:#250516;font-weight:800;font-size:12px}
 footer{padding:28px 7vw;background:#0d0012;border-top:1px solid rgba(244,189,55,.2);color:#9e8aa6;font-size:10px;letter-spacing:1.5px;display:flex;justify-content:space-between}

@@ -25,23 +25,23 @@ const observer=new IntersectionObserver(entries=>{
 },{rootMargin:"-35% 0px -55% 0px",threshold:[.05,.2,.5]});
 sections.forEach(s=>observer.observe(s));
 
-const SPONSOR_FORM_URL="https://forms.gle/dH9rbXBTeb3sxjmq6";
-document.querySelectorAll(".tier-slot").forEach(slot=>{
-  const tier=slot.dataset.tier;
-  const sponsors=(typeof SPONSORS!=="undefined"&&SPONSORS[tier])||[];
-  if(sponsors.length){
-    slot.classList.add("has-sponsors");
-    slot.innerHTML=sponsors.map(s=>{
-      const img=`<img src="${s.logo}" alt="${s.name}" loading="lazy">`;
+const showcase=document.getElementById("sponsorShowcase");
+const showcaseGrid=document.getElementById("sponsorShowcaseGrid");
+if(showcase&&showcaseGrid&&typeof SPONSORS!=="undefined"){
+  const combined=["platinum","gold","bronze"].flatMap(tier=>
+    (SPONSORS[tier]||[]).map(s=>({...s,tier}))
+  );
+  if(combined.length){
+    showcaseGrid.innerHTML=combined.map(s=>{
+      const label=s.tier.charAt(0).toUpperCase()+s.tier.slice(1);
+      const content=`<span class="sponsor-tier-tag">${label}</span><img src="${s.logo}" alt="${s.name}" loading="lazy">`;
       return s.url
-        ? `<a class="sponsor-logo" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">${img}</a>`
-        : `<span class="sponsor-logo" title="${s.name}">${img}</span>`;
+        ? `<a class="sponsor-thumb tier-${s.tier}" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">${content}</a>`
+        : `<span class="sponsor-thumb tier-${s.tier}" title="${s.name}">${content}</span>`;
     }).join("");
-  }else{
-    const label=tier.charAt(0).toUpperCase()+tier.slice(1);
-    slot.innerHTML=`<a href="${SPONSOR_FORM_URL}" target="_blank" rel="noopener">Become our first ${label} sponsor →</a>`;
+    showcase.hidden=false;
   }
-});
+}
 
 document.querySelectorAll(".tier-toggle").forEach(btn=>{
   btn.addEventListener("click",()=>{

@@ -32,12 +32,17 @@ if(showcase&&showcaseGrid&&typeof SPONSORS!=="undefined"){
     (SPONSORS[tier]||[]).map(s=>({...s,tier}))
   );
   if(combined.length){
+    const linkify=text=>text.replace(/(https?:\/\/\S+)/g,url=>`<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
     showcaseGrid.innerHTML=combined.map(s=>{
       const label=s.tier.charAt(0).toUpperCase()+s.tier.slice(1);
-      const content=`<span class="sponsor-tier-tag">${label}</span><img src="${s.logo}" alt="${s.name}" loading="lazy">`;
-      return s.url
-        ? `<a class="sponsor-thumb tier-${s.tier}" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">${content}</a>`
-        : `<span class="sponsor-thumb tier-${s.tier}" title="${s.name}">${content}</span>`;
+      const logo=`<img src="${s.logo}" alt="${s.name}" loading="lazy">`;
+      const blurb=s.blurb?`<p class="sponsor-blurb">${linkify(s.blurb)}</p>`:"";
+      const video=s.video?`<a class="sponsor-video-link" href="${s.video}" target="_blank" rel="noopener">▶ Watch video</a>`:"";
+      return `<div class="sponsor-thumb tier-${s.tier}" title="${s.name}">`
+        +`<span class="sponsor-tier-tag">${label}</span>`
+        +(s.url?`<a href="${s.url}" target="_blank" rel="noopener">${logo}</a>`:logo)
+        +blurb+video
+        +`</div>`;
     }).join("");
     showcase.hidden=false;
   }

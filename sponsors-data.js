@@ -13,13 +13,27 @@
  *
  * `url` is optional — leave it out (or set to "") if the sponsor doesn't have a
  * site/social link yet; the logo will still show, just without a click-through.
+ *
+ * `blurb` and `video` are also optional — add them for a sponsor who wants a short
+ * promo message and/or a video link shown under their logo in the showcase.
  */
 const SPONSORS = {
   platinum: [
     // { name: "Business Name", logo: "assets/sponsors/business-name.png", url: "https://example.com" },
   ],
   gold: [
-    { name: "Serene Montessori", logo: "assets/sponsors/serene.png", url: "https://www.facebook.com/people/Serene-Montessori/61571863388376/" },
+    { name: "Serene Montessori", logo: "assets/sponsors/serene.png", url: "https://www.facebook.com/people/Serene-Montessori/61571863388376/",
+      blurb: `🌿 Serene Montessori🌿
+Home-Based Montessori Preschool in Marysville, WA
+
+🌱we have a few openings left for this academic year !🌱
+
+📸 Please call to schedule a classroom tour and learn more about our Montessori program.
+🔗 https://tinyurl.com/5f55fwab
+
+
+✨ Serene Montessori – Where curiosity blossoms and children thrive.`,
+      video: "https://www.facebook.com/share/v/1Ez3YMhK5e/" },
   ],
   bronze: [
     // { name: "Business Name", logo: "assets/sponsors/business-name.png", url: "https://example.com" },

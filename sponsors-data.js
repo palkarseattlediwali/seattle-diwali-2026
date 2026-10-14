@@ -19,7 +19,7 @@ const SPONSORS = {
     // { name: "Business Name", logo: "assets/sponsors/business-name.png", url: "https://example.com" },
   ],
   gold: [
-    // { name: "Business Name", logo: "assets/sponsors/business-name.png", url: "https://example.com" },
+    { name: "Serene Montessori", logo: "assets/sponsors/serene.png", url: "https://www.facebook.com/people/Serene-Montessori/61571863388376/" },
   ],
   bronze: [
     // { name: "Business Name", logo: "assets/sponsors/business-name.png", url: "https://example.com" },

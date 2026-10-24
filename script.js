@@ -33,10 +33,11 @@ if(showcase&&showcaseGrid&&typeof SPONSORS!=="undefined"){
   );
   if(combined.length){
     const linkify=text=>text.replace(/(https?:\/\/\S+)/g,url=>`<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+    const linkName=(text,s)=>s.url?text.split(s.name).join(`<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`):text;
     showcaseGrid.innerHTML=combined.map(s=>{
       const label=s.tier.charAt(0).toUpperCase()+s.tier.slice(1);
       const logo=`<img src="${s.logo}" alt="${s.name}" loading="lazy">`;
-      const blurb=s.blurb?`<p class="sponsor-blurb">${linkify(s.blurb)}</p>`:"";
+      const blurb=s.blurb?`<p class="sponsor-blurb">${linkName(linkify(s.blurb),s)}</p>`:"";
       const video=s.video?`<a class="sponsor-video-link" href="${s.video}" target="_blank" rel="noopener">▶ Watch video</a>`:"";
       return `<div class="sponsor-thumb tier-${s.tier}" title="${s.name}">`
         +`<span class="sponsor-tier-tag">${label}</span>`
